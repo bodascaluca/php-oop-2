@@ -74,5 +74,7 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
 
     <h2> Totale : € <?php echo $matteo->getTotalPrice(); ?></h2>
     <h2> <?php echo $matteo->yearValidation(); ?></h2>
+    <h2> <?php echo $matteo->emailCheck(20); ?></h2>
+
 </body>
 </html>

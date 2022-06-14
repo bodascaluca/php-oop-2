@@ -9,8 +9,9 @@ class Utente {
     public $mese_scadenza;
     public $anno_scadenza;
     public $carello = [];
+    public $emailArray = [];
 
-    function __construct($_nome, $_email, $_carta, $_mese_scadenza, $_anno_scadenza ){
+    function __construct($_nome, $_email, $_carta, $_mese_scadenza, $_anno_scadenza){
         $this->nome = $_nome;
         $this->email = $_email;
         $this->carta = $_carta;
@@ -33,6 +34,14 @@ class Utente {
             $total_price += $item->prezzo;
         }
         return $total_price;
+    }
+
+    function emailCheck($total_price){
+        $newPrice = 0;
+        if($this->email){
+            return $newPrice = $total_price * (0.02) ;
+            // return "Essendo che sei nostro cleinte hai un 20% di sconto";
+        }
     }
 
     function yearValidation(){
