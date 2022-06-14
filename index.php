@@ -11,12 +11,28 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
 <?php 
     // include_once __DIR__ . "/Prodotto.php";
     include_once __DIR__ . "/Alimentazione.php";
+    include_once __DIR__ . "/Cuccia.php";
+    include_once __DIR__ . "/Guinzaglio.php";
 
     $crocchetta_magica = new Alimentazione("Polox", "Next", 16, 2000, "Secco");
-    var_dump($crocchetta_magica);
+    // var_dump($crocchetta_magica);
 
     $bustina = new Alimentazione("Bustinux", "Purino", 10, 30, "Umido" );
-    var_dump($bustina);
+    // var_dump($bustina);
+
+    $cuccia_iglu_rosa = new Cuccia("Igloo rosa", "Zolux", 42, "peluche", "dentro casa");
+    // var_dump($cuccia_iglu_rosa);
+
+    $cuccia_rex= new Cuccia("Rex", "Zolux", 100, "legno", "fuori casa");
+    // var_dump($cuccia_rex);
+
+    $guinzaglio_Disney = new Guinzaglio("Baz", "Brexit", 20, "Disney", "no GPS", "cane picolo");
+    // var_dump($guinzaglio_Disney );
+
+    $guizaglio_proxy = new Guinzaglio("Proxy", "War_tech", 50, "", "con GPS", "cane piccolo");
+    // var_dump($guizaglio_proxy);
+
+
 ?>
 
 <!DOCTYPE html>
