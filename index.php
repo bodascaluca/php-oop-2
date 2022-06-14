@@ -13,6 +13,7 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
     include_once __DIR__ . "/Alimentazione.php";
     include_once __DIR__ . "/Cuccia.php";
     include_once __DIR__ . "/Guinzaglio.php";
+    include_once __DIR__ . "/Utente.php";
 
     $crocchetta_magica = new Alimentazione("Polox", "Next", 16, 2000, "Secco");
     // var_dump($crocchetta_magica);
@@ -31,6 +32,10 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
 
     $guizaglio_proxy = new Guinzaglio("Proxy", "War_tech", 50, "", "con GPS", "cane piccolo");
     // var_dump($guizaglio_proxy);
+
+    $matteo = new Utente("Matteo","matteo.rocca@gmail.com", "1234 4567 1230 2309", 11, 2023 );
+
+    $marco = new Utente("Marco","marco.zampoglio@gmail.com", "0934 4567 0123 2309", 02, 2021 );
 
 
 ?>
