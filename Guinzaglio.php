@@ -14,6 +14,6 @@ class Guinzaglio extends Prodotto{
     }
 
     public function printInfo(){
-       return "$this->nome_prodotto della marca $this->_marca, prezzo $this->_prezzo €.  Con $this->_gps / $this->_bramdizzato / $this->_taglia";     
+       return "$this->nome_prodotto della marca $this->marca, prezzo $this->prezzo €.  Con $this->gps / $this->bramdizzato / $this->taglia";     
     }
 }

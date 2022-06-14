@@ -30,8 +30,18 @@ class Utente {
     function getTotalPrice(){
         $total_price = 0;
         foreach($this->carello as $item){
-            $total_price *= $item->prezzo;
+            $total_price += $item->prezzo;
         }
         return $total_price;
+    }
+
+    function yearValidation(){
+        $current_mese= 11;
+        $current_year = 2022;
+        if($this->anno_scadenza >= $current_year && $this->mese_scadenza <= $current_mese){
+            return "La tua carta è valida, puoi procedere al pagamento";
+        } else {
+            return "La tua carta non è valida inserisci una nuova carta di pagamento" ;
+        }
     }
 }

@@ -13,6 +13,6 @@ class Cuccia extends Prodotto{
     }
 
     public function printInfo(){
-       return "$this->nome_prodotto della marca $this->_marca, prezzo $this->_prezzo €. $this->_materiale / $this->_ambiente";     
+       return "$this->nome_prodotto della marca $this->marca, prezzo $this->prezzo €. $this->materiale / $this->ambiente";     
     }
 }

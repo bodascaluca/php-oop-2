@@ -33,7 +33,7 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
     $guizaglio_proxy = new Guinzaglio("Proxy", "War_tech", 50, "", "con GPS", "cane piccolo");
     // var_dump($guizaglio_proxy);
 
-    $matteo = new Utente("Matteo","matteo.rocca@gmail.com", "1234 4567 1230 2309", 11, 2023 );
+    $matteo = new Utente("Matteo","matteo.rocca@gmail.com", "1234 4567 1230 2309", 11, 2021 );
     $matteo->addProductCart($guinzaglio_Disney);
     $matteo->addProductCart($crocchetta_magica);
 
@@ -41,7 +41,7 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
     $marco->addProductCart($guizaglio_proxy);
     $marco->addProductCart($bustina);
 
-    var_dump($matteo);
+    var_dump($crocchetta_magica);
     var_dump($marco);
 ?>
 
@@ -54,9 +54,10 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
     <title>OOP-2</title>
 </head>
 <body>
+
     <h3>Proditti disponibili :</h3>
     <ul>
-        <li> <?php echo $rocchetta_magica->printInfo(); ?> </li>
+        <li> <?php echo $crocchetta_magica->printInfo(); ?> </li>
         <li> <?php echo $bustina->printInfo(); ?> </li>
         <li> <?php echo $cuccia_iglu_rosa->printInfo(); ?> </li>
         <li> <?php echo $cuccia_rex->printInfo(); ?> </li>
@@ -64,5 +65,14 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
         <li> <?php echo $guizaglio_proxy->printInfo(); ?> </li>
     </ul>
 
+    <h2>Ciao <?php echo $matteo->nome ?>. Ecco il tuo carello:</h2>
+    <ul>
+        <?php foreach($matteo->carello as $carelloItem) {?>
+        <li> <?php echo $carelloItem ->printInfo() ?></li>
+        <?php } ?>
+    </ul>
+
+    <h2> Totale : € <?php echo $matteo->getTotalPrice(); ?></h2>
+    <h2> <?php echo $matteo->yearValidation(); ?></h2>
 </body>
 </html>

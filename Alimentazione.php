@@ -13,6 +13,6 @@ class Alimentazione extends Prodotto{
     }
 
     public function printInfo(){
-       return "$this->nome_prodotto della marca $this->_marca, prezzo $this->_prezzo €. $this->_tipologia / $this->_peso gr";     
+       return "$this->nome_prodotto della marca $this->marca, prezzo $this->prezzo €. $this->tipologia / $this->peso gr";     
     }
 }
