@@ -34,10 +34,15 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
     // var_dump($guizaglio_proxy);
 
     $matteo = new Utente("Matteo","matteo.rocca@gmail.com", "1234 4567 1230 2309", 11, 2023 );
+    $matteo->addProductCart($guinzaglio_Disney);
+    $matteo->addProductCart($crocchetta_magica);
 
     $marco = new Utente("Marco","marco.zampoglio@gmail.com", "0934 4567 0123 2309", 02, 2021 );
+    $marco->addProductCart($guizaglio_proxy);
+    $marco->addProductCart($bustina);
 
-
+    var_dump($matteo);
+    var_dump($marco);
 ?>
 
 <!DOCTYPE html>
@@ -49,6 +54,15 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
     <title>OOP-2</title>
 </head>
 <body>
+    <h3>Proditti disponibili :</h3>
+    <ul>
+        <li> <?php echo $rocchetta_magica->printInfo(); ?> </li>
+        <li> <?php echo $bustina->printInfo(); ?> </li>
+        <li> <?php echo $cuccia_iglu_rosa->printInfo(); ?> </li>
+        <li> <?php echo $cuccia_rex->printInfo(); ?> </li>
+        <li> <?php echo $guinzaglio_Disney->printInfo(); ?> </li>
+        <li> <?php echo $guizaglio_proxy->printInfo(); ?> </li>
+    </ul>
 
 </body>
 </html>
